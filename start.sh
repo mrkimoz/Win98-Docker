@@ -9,4 +9,4 @@ qemu-system-x86_64 \
     -device cirrus-vga \
     -net nic,model=rtl8139 \
     -net user \
-    -vnc :5900
+    -vnc :0
