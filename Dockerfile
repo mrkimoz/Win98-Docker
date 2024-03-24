@@ -3,6 +3,7 @@ FROM ubuntu:latest
 
 # Install QEMU and other necessary packages
 RUN apt-get update && apt-get install -y \
+    apt-utils \
     qemu \
     qemu-kvm \
     qemu-system-x86 \
