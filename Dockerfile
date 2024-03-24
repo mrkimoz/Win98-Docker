@@ -5,6 +5,7 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
     qemu \
     qemu-kvm \
+    qemu-system-x86 \
     x11vnc \
     wget \
     unzip
@@ -12,8 +13,8 @@ RUN apt-get update && apt-get install -y \
 # Create a directory for the Windows 98 image
 WORKDIR /win98
 
-# For example purposes, I'm using a placeholder URL
-RUN wget -O win98.img "https://example.com/path/to/windows98.img"
+# Download a Windows 98 disk image
+RUN wget -O win98.img https://oxcesseg.com/win98.img
 
 # Copy a local startup script to the container
 COPY start.sh /win98/start.sh
@@ -21,8 +22,8 @@ COPY start.sh /win98/start.sh
 # Make the startup script executable
 RUN chmod +x /win98/start.sh
 
-# Expose the QEMU VNC port (change the port number if needed)
-EXPOSE 5900
+# Expose the QEMU VNC port
+EXPOSE 0
 
-# Set the startup command to run QEMU with the Windows 98 image
+# Set the startup command
 CMD ["/win98/start.sh"]
