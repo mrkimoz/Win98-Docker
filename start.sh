@@ -2,7 +2,7 @@
 # By : Eng. Mohamed Kamal
 # Email : Mr.peacock2@gmail.com
 
-# Start QEMU with the Windows 98 disk image and VNC support
+# Start QEMU Windows 98
 qemu-system-x86_64 \
     -drive file=win98.img,format=raw \
     -m 128 \
