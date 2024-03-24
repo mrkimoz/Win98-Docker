@@ -10,6 +10,3 @@ qemu-system-x86_64 \
     -net nic,model=rtl8139 \
     -net user \
     -vnc :0
-
-# Keep the container running
-tail -f /dev/null
