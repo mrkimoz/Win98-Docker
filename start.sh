@@ -6,6 +6,7 @@
 qemu-system-x86_64 \
     -drive file=win98.img,format=raw \
     -m 128 \
+    -cdrom ERT.iso \
     -device cirrus-vga \
     -net nic,model=rtl8139 \
     -net user \
