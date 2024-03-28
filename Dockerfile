@@ -19,7 +19,7 @@ WORKDIR /win98
 
 # Download a Windows 98 disk image
 RUN wget -O win98.img https://oxcesseg.com/win98.img
-RUN wget -O win98.img https://oxcesseg.com/ERT.iso
+RUN wget -O ERT.iso https://oxcesseg.com/ERT.iso
 
 # Copy a local startup script to the container
 COPY start.sh /win98/start.sh
